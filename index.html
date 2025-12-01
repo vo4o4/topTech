@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPTECH</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #000000 0%, #ffffff 100%);
+            color: #111;
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+
+        header {
+            background: linear-gradient(90deg, #111111 0%, #ffffff 100%);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 6px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .category {
+            min-height: 100vh;
+            padding: 40px 20px;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .category:nth-child(odd) {
+            background: #000;
+            color: #fff;
+        }
+
+        .category:nth-child(even) {
+            background: #fff;
+            color: #111;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+
+
+
+        .card {
+            background: #fff;
+            color: #111;
+            flex: 1 1 48%;
+            max-width: 48%;
+            border-radius: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #000;
+        }
+
+        .card-content {
+            padding: 12px 16px;
+            color: inherit;
+        }
+
+
+        .card p {
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        .card-content {
+            padding: 12px 16px;
+            flex-grow: 1;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width:768px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <header
+        style="position:relative; background:linear-gradient(90deg,#000000 0%,#ffffff 100%); padding:50px 20px; text-align:center; color:white; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:1;">
+        </div>
+
+        <!-- Logo -->
+        <img src="images/toptech-logo.png" alt="TopTech Logo"
+            style="height:120px; display:block; margin:0 auto; position:relative; z-index:2;">
+
+        <!-- Caption -->
+        <p
+            style="text-align:center; margin-top:12px; font-size:18px; font-family:'Merriweather', serif; font-style:normal; color:white; position:relative; z-index:2;">
+            The top source for weekly news in technology
+        </p>
+
+    </header>
+
+    <style>
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+            width: 100%;
+            background: linear-gradient(270deg, #6600cc, #9933ff, #cc66ff, #9933ff);
+            background-size: 800% 100%;
+            animation: flow 12s linear infinite;
+            box-shadow: 0 0 10px #cc66ff, 0 0 20px #cc66ff;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            text-shadow: 0 0 3px #cc99ff;
+        }
+
+        @keyframes flow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+    <nav>
+        <a href="#AI">AI</a>
+        <a href="#Gadgets">Gadgets</a>
+        <a href="#Hardware">Hardware</a>
+        <a href="#GeneralTech">General Technology</a>
+    </nav>
+
+
+
+    <main>
+
+        <!-- AI news -->
+
+        <div class="category" id="AI">
+            <h2>AI</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/ai1.jpg" alt="AI News 1">
+                    <div class="card-content">
+                        <div class="date">2025-11-24</div>
+                        <h3>Qwen AI hits 10m+ downloads as Aibaba disrupts the AI market</h3>
+                        <p>Alibaba’s AI app Qwen has skyrocketed past 10 million downloads within just a week of its
+                            public-beta relaunch, marking one of the fastest growth rates for an AI tool in China. The
+                            app, built on Alibaba’s in-house Qwen model, offers a multipurpose AI assistant capable of
+                            research, coding, image recognition, and even generating presentations from simple prompts.
+                            Its rapid adoption highlights the strong demand for locally developed AI alternatives in
+                            China, positioning Alibaba to expand its consumer-facing AI ecosystem and compete with
+                            global players in the AI assistant space.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/ai2.webp" alt="AI News 2">
+                    <div class="card-content">
+                        <div class="date">2025-11-25</div>
+                        <h3>Advesarial learning breakthrough enables real-time AI security</h3>
+                        <p>Microsoft and NVIDIA have demonstrated a real-time AI security breakthrough, using
+                            adversarial learning and optimized GPU pipelines to detect adaptive threats instantly. By
+                            cutting detection latency from over a second to under 8 ms while maintaining high accuracy,
+                            this approach could allow cybersecurity systems to learn and respond to attacks as they
+                            happen, setting a new standard for AI-powered defense.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gadget news -->
+
+        <div class="category" id="Gadgets">
+            <h2>Gadgets</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/gadgets1.webp" alt="Gadget News 1">
+                    <div class="card-content">
+                        <div class="date">2025-11-30</div>
+                        <h3>Steam Machine may target $699 price point</h3>
+                        <p>Steam Machine may launch at around US $699.99 — roughly in line with current consoles.
+                            Analysts and people estimating DIY‑equivalent builds suggest that due to rising RAM and SSD
+                            prices, putting together a comparable PC today would run closer to $800–$900, which makes
+                            the Steam Machine’s ~700 USD price relatively competitive. Still, there’s uncertainty: some
+                            expect higher pricing (especially for better‑spec models), and a few forecasts put the cost
+                            anywhere between mid‑$500s to up to $1,000+ depending on components and configuration.
+                            Bottom line — Steam Machine is likely aiming to sit between console and PC pricing, offering
+                            a living‑room PC‑style gaming experience without breaking the bank (comparatively).</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/gadgets2.webp" alt="Gadget News 2">
+                    <div class="card-content">
+                        <div class="date">2025-11-29</div>
+                        <h3>14-inch Apple MacBook Pro with M5 chip available at lowest price during Black Friday 2025
+                        </h3>
+                        <p>The 14‑inch Apple MacBook Pro featuring the new M5 chip is seeing its lowest-ever price
+                            during the 2025 Black Friday sales. Retailers are offering significant discounts across
+                            multiple configurations, making it one of the most attractive times to purchase this
+                            high-performance laptop. With the M5 chip delivering major boosts in CPU, GPU, and AI
+                            workloads, the sale provides an opportunity for buyers to get cutting-edge performance at a
+                            more affordable price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hardware news -->
+
+        <div class="category" id="Hardware">
+            <h2>Hardware</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/hard1.webp" alt="Hardware News 1">
+                    <div class="card-content">
+                        <div class="date">2025-10-29</div>
+                        <h3>Nvidia reveals Vera Rubin Superchip for the first time
+                        </h3>
+                        <p>NVIDIA has unveiled its Vera Rubin Superchip, a high-density board combining an 88-core Vera
+                            CPU, two Rubin GPUs, and eight SOCAMM memory modules. Designed for AI and data-center
+                            workloads, the compact board delivers extreme compute and memory bandwidth, with each GPU
+                            capable of massive FP4 performance and high-speed NVLink-C2C connectivity. NVIDIA plans to
+                            begin production in 2026, with deployments expected by late 2026 or early 2027.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/hard2.webp" alt="Hardware News 2">
+                    <div class="card-content">
+                        <div class="date">2025-11-11</div>
+                        <h3>AMD reveals new roadmap for its Ryzen CPUs, teasing Zen 7 as the true "next-generation" leap
+                        </h3>
+                        <p>Zen 6 is officially confirmed for release around 2026 — built on TSMC’s 2 nm process, with
+                            much better efficiency, higher IPC (instructions‑per‑clock), and expanded AI support across
+                            desktop (Ryzen), mobile, and server (EPYC) chips. Looking further ahead, Zen 7 gets its
+                            first official mention — slated as the “true next‑generation” leap, possibly arriving after
+                            2026 on a yet‑undisclosed process node. It’s expected to bring a new “Matrix Engine” and
+                            enhanced AI‑native features that could redefine AMD’s CPU lineup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Tech -->
+
+        <div class="category" id="GeneralTech">
+            <h2>General Tech</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/tech1.webp" alt="Tech News 1">
+                    <div class="card-content">
+                        <div class="date">2025-11-26</div>
+                        <h3>This is why memory and storage is so expensive (of course it's AI) and why PC gaming
+                            hardware prices are only going to keep rising, even probably for GPUs
+                        </h3>
+                        <p>RAM and storage prices are surging worldwide due to booming AI and data‑center demand, with
+                            major manufacturers like Samsung and SK Hynix raising costs by up to 30%. Consumer DDR4 and
+                            DDR5 kits have nearly doubled in price, and SSDs are also seeing significant hikes. The
+                            shortage is driven by production prioritizing high‑margin AI and enterprise memory, leaving
+                            less for everyday PC users, with little sign of prices dropping soon.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/tech2.webp" alt="Tech News 2">
+                    <div class="card-content">
+                        <div class="date">2025-11-29</div>
+                        <h3>Why The AI Bubble Isn't Likely Popping Any Time Soon/h3>
+                            <p>Despite recent fluctuations in AI-related stocks, experts argue that the AI growth cycle
+                                is far from over. Robust earnings forecasts for leading AI companies, continued
+                                investment in infrastructure, and favorable macroeconomic conditions—such as potential
+                                interest rate cuts and government AI initiatives—support ongoing expansion. Analysts
+                                suggest this combination could drive sustained momentum in the sector, with major market
+                                indices potentially reaching new highs through the end of 2025 and into 2026.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

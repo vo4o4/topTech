@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPTECH</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #000000 0%, #ffffff 100%);
+            color: #111;
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+
+        header {
+            background: linear-gradient(90deg, #111111 0%, #ffffff 100%);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 6px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .category {
+            min-height: 100vh;
+            padding: 40px 20px;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .category:nth-child(odd) {
+            background: #000;
+            color: #fff;
+        }
+
+        .category:nth-child(even) {
+            background: #fff;
+            color: #111;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+
+
+
+        .card {
+            background: #fff;
+            color: #111;
+            flex: 1 1 48%;
+            max-width: 48%;
+            border-radius: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #000;
+        }
+
+        .card-content {
+            padding: 12px 16px;
+            color: inherit;
+        }
+
+
+        .card p {
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        .card-content {
+            padding: 12px 16px;
+            flex-grow: 1;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width:768px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <header
+        style="position:relative; background:linear-gradient(90deg,#000000 0%,#ffffff 100%); padding:50px 20px; text-align:center; color:white; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:1;">
+        </div>
+
+        <!-- Logo -->
+        <img src="images/toptech-logo.png" alt="TopTech Logo"
+            style="height:120px; display:block; margin:0 auto; position:relative; z-index:2;">
+
+        <!-- Caption -->
+        <p
+            style="text-align:center; margin-top:12px; font-size:18px; font-family:'Merriweather', serif; font-style:normal; color:white; position:relative; z-index:2;">
+            The top source for weekly news in technology
+        </p>
+
+    </header>
+
+    <style>
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+            width: 100%;
+            background: linear-gradient(270deg, #6600cc, #9933ff, #cc66ff, #9933ff);
+            background-size: 800% 100%;
+            animation: flow 12s linear infinite;
+            box-shadow: 0 0 10px #cc66ff, 0 0 20px #cc66ff;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            text-shadow: 0 0 3px #cc99ff;
+        }
+
+        @keyframes flow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+    <nav>
+        <a href="#AI">AI</a>
+        <a href="#Gadgets">Gadgets</a>
+        <a href="#Hardware">Hardware</a>
+        <a href="#GeneralTech">General Technology</a>
+    </nav>
+
+
+
+    <main>
+
+        <!-- AI news -->
+
+        <div class="category" id="AI">
+            <h2>AI</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/ai1.jpg" alt="AI News 1">
+                    <div class="card-content">
+                        <div class="date"><!--AI1_DATE--></div>
+                        <h3><!--AI1_TITLE--></h3>
+                        <p><!--AI1_SUMMARY--></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/ai2.webp" alt="AI News 2">
+                    <div class="card-content">
+                        <div class="date"><!--AI2_DATE--></div>
+                        <h3><!--AI2_TITLE--></h3>
+                        <p><!--AI2_SUMMARY--></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gadget news -->
+
+        <div class="category" id="Gadgets">
+            <h2>Gadgets</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/gadgets1.webp" alt="Gadget News 1">
+                    <div class="card-content">
+                        <div class="date"><!--GADGET1_DATE--></div>
+                        <h3><!--GADGET1_TITLE--></h3>
+                        <p><!--GADGET1_SUMMARY--></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/gadgets2.webp" alt="Gadget News 2">
+                    <div class="card-content">
+                        <div class="date"><!--GADGET2_DATE--></div>
+                        <h3><!--GADGET2_TITLE--></h3>
+                        <p><!--GADGET2_SUMMARY--></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hardware news -->
+
+        <div class="category" id="Hardware">
+            <h2>Hardware</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/hard1.webp" alt="Hardware News 1">
+                    <div class="card-content">
+                        <div class="date"><!--HW1_DATE--></div>
+                        <h3><!--HW1_TITLE--></h3>
+                        <p><!--HW1_SUMMARY--></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/hard2.webp" alt="Hardware News 2">
+                    <div class="card-content">
+                        <div class="date"><!--HW2_DATE--></div>
+                        <h3><!--HW2_TITLE--></h3>
+                        <p><!--HW2_SUMMARY--></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Tech -->
+
+        <div class="category" id="GeneralTech">
+            <h2>General Tech</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="<!--GEN1_IMG-->" alt="Tech News 1">
+                    <div class="card-content">
+                        <div class="date"><!--GEN1_DATE--></div>
+                        <h3><!--GEN1_TITLE--></h3>
+                        <p><!--GEN1_SUMMARY--></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="<!--GEN2_IMG-->" alt="Tech News 2">
+                    <div class="card-content">
+                        <div class="date"><!--GEN2_DATE--></div>
+                        <h3><!--GEN2_TITLE--></h3>
+                        <p><!--GEN2_SUMMARY--></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
